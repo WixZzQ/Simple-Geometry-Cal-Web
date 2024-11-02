@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Geometry Website</title>
+</head>
+<nav>
+  <div class="navbar bg-base-100 mb-10 bg-slate-100 rounded-lg">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+          <li><a>Homepage</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <a class="btn btn-ghost text-xl">Geometry</a>
+    </div>
+    <div class="navbar-end">
+      <button class="btn btn-ghost btn-circle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+      <button class="btn btn-ghost btn-circle">
+        <div class="indicator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          <span class="badge badge-xs badge-primary indicator-item"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</nav>
+<body class="m-8">
+    <header></header>
+    <main>
+        <!-- Main content container -->
+         <div class="flex flex-col md:flex-row">
+            <!-- Shape card container -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <!-- triangle card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                      <img
+                        src="images/triangle.png"
+                        alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Triangle</h2>
+                      <p>Area(A) = 0.5 x b x h</p>
+                      <div>
+                        <input id="triangle-value" type="text" placeholder="b" class="w-24 text-2xl p-2 rounded-lg">
+                        <span class="mr-4 ml-2">cm</span>
+                        <input id="triangle-height" type="text" placeholder="h" class="w-24 text-2xl p-2 rounded-lg">
+                        <span class="mr-4 ml-2">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area: <span id="triangle-area"></span><span> cm <sup>2</sup></span></p>
+                      </div>
+                      <div class="card-actions justify-end">
+                        <button  id="calculator-btn" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- Rectangle Card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                  <figure>
+                    <img
+                      src="Images/rectangle.png"
+                      alt="Geometry" />
+                  </figure> 
+                  <div class="card-body">
+                    <h2 class="card-title">Rectangle</h2>
+                    <p>Area (A) = w x I</p>
+                    <div>
+                      <!-- Make sure the id doesn't match with others -->
+                      <input id="rectangle-width" type="text" placeholder="w" class="w-24 text-2xl p-2 rounded-lg">
+                      <span class="mr-4 ml-2">cm</span>
+                      <input id="rectangle-length" type="text" placeholder="l" class="w-24 text-2xl p-2 rounded-lg">
+                      <span class="mr-4 ml-2">cm</span>
+                    </div>
+                    <div>
+                      <p class="text-2xl">Area: <span id="rectangle-area"></span><span> cm <sup>2</sup></p>
+                    </div>
+                    <div class="card-actions justify-end ">
+                      <button id="calculator-btn-2" class="btn btn-primary w-full">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Parellelogram card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                  <figure>
+                    <img
+                      src="Images/parallelogram.png"
+                      alt="Geometry" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Parellelogram</h2>
+                    <p>Area (A) = b x h </p>
+                    <div>
+                      <!-- Make sure the id doesn't match with others -->
+                      <input id='parallelogram-width' type="text" placeholder="w" class="w-24 text-2xl p-2 rounded-lg">
+                      <span class="mr-4 ml-2">cm</span>
+                      <input id="parallelogram-length" type="text" placeholder="l" class="w-24 text-2xl p-2 rounded-lg">
+                      <span class="mr-4 ml-2">cm</span>
+                    </div>
+                    <div>
+                      <p class="text-2xl">Area: <span id="parallelogram-area"></span><span> cm <sup>2</sup></p>
+                    </div>
+                    <div class="card-actions justify-end">
+                      <button class="btn btn-primary w-full" id="calculator-btn-3">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- ellipse card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                  <figure>
+                    <img
+                      src="Images/ellipse.png"
+                      alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="text-center font-bold text-2xl text-black">Ellipse</h2>
+                    <p class="text-center">Area (A) =  π x a x b</p>
+                    <div>
+                      <!-- Make sure the id doesn't match with others -->
+                      <input id='ellipse-width' type="text" placeholder="a" class="w-24 text-2xl p-2 rounded-lg">
+                      <span class="mr-4 ml-2">cm</span>
+                      <input id="ellipse-length" type="text" placeholder="b" class="w-24 text-2xl p-2 rounded-lg">
+                      <span class="mr-4 ml-2">cm</span>
+                    </div>
+                    <div>
+                      <p class="text-2xl">Area: <span id="ellipse-area"></span><span> cm <sup>2</sup></p>
+                    </div>
+                    <div class="card-actions justify-end">
+                      <button id="calculator-btn-4" class="btn btn-primary w-full ">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+            <!-- Area calcualtion container -->
+            <div class="w-96 border-2 border-gray-700 rounded-md">
+                <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+            </div>
+         </div>
+    </main>
+
+    <script src="geometry/triangle.js"></script>
+    <script src="geometry/rectangle.js"></script>
+    <script src="geometry/ellipse.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="geometry/parellelogram.js"></script>
+    <script  src="geometry/config.js"></script>
+
+</body>
+</html>
